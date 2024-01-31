@@ -10,7 +10,7 @@ int main(int argc, char *argv[]) {
     int number = atoi(argv[1]); //Convert the console input argument to an integer
     
     /*It must be verified that the entered number is greater than or equal to zero*/
-    
+
     if(number < 0)
     {
         perror("El núnmero debe ser mayor a cero");
@@ -18,7 +18,16 @@ int main(int argc, char *argv[]) {
     }
     /*Implement the function that calculates the factorial of the input argument*/
     
+    int factorial = 1;
+    int b;
+    for (b = number; b > 1; b--)
+    {
+        factorial *= b;
+    }
+    
     /*Print the result*/
+    printf("El factorial de %d es %d",number,factorial);
+    
     
     /*Implement the function that calculates if the argument is a prime number*/
 
